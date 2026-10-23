@@ -35,7 +35,7 @@ jobs:
         with:
           name: preprint-pdf
       # The template files at the root of the ZIP, without repository-only files.
-      - run: zip -r aind-preprint-typst.zip . -x '.git/*' '.github/*' 'docs/*' '.gitignore' 'main.pdf'
+      - run: zip -r aind-preprint-typst.zip . -x '.git/*' '.github/*' 'assets/*' '.gitignore' 'main.pdf'
       - uses: softprops/action-gh-release@v3
         with:
           generate_release_notes: true

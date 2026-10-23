@@ -7,7 +7,7 @@
 //   #import "typst/preprint.typ": *
 //   #show: preprint.with(title: [...], authors: (...), affiliations: (...), ...)
 //
-// The fonts are in typst/fonts: `typst compile --font-path typst/fonts main.typ`.
+// The fonts are in fonts/: `typst compile --font-path fonts main.typ`.
 
 #let colors = (
   gray1: rgb("#aaa39f"),
