@@ -1,0 +1,17 @@
+[package]
+name = "aind-preprint"
+version = "2.1.0"
+entrypoint = "preprint.typ"
+authors = ["Allen Institute for Neural Dynamics"]
+license = "MIT"
+description = "The Allen Institute preprint template."
+repository = "https://github.com/AllenNeuralDynamics/typst-template"
+keywords = ["preprint", "article", "allen institute"]
+categories = ["paper"]
+compiler = "0.15.0"
+exclude = ["main.pdf", ".github", "docs"]
+
+[template]
+path = "."
+entrypoint = "main.typ"
+thumbnail = "thumbnail.png"

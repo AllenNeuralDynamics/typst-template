@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Pygments' "manni" style (the template's \usemintedstyle{manni}), without its background. -->
+<plist version="1.0">
+<dict>
+  <key>name</key><string>manni</string>
+  <key>settings</key>
+  <array>
+    <dict><key>settings</key><dict><key>foreground</key><string>#000000</string></dict></dict>
+    <dict><key>scope</key><string>comment</string>
+      <key>settings</key><dict><key>foreground</key><string>#0099FF</string><key>fontStyle</key><string>italic</string></dict></dict>
+    <dict><key>scope</key><string>keyword, storage.type, storage.modifier, constant.language</string>
+      <key>settings</key><dict><key>foreground</key><string>#006699</string><key>fontStyle</key><string>bold</string></dict></dict>
+    <dict><key>scope</key><string>keyword.operator.logical, keyword.operator.word</string>
+      <key>settings</key><dict><key>foreground</key><string>#000000</string><key>fontStyle</key><string>bold</string></dict></dict>
+    <dict><key>scope</key><string>keyword.operator, punctuation.separator.assignment</string>
+      <key>settings</key><dict><key>foreground</key><string>#555555</string><key>fontStyle</key><string></string></dict></dict>
+    <dict><key>scope</key><string>constant.numeric</string>
+      <key>settings</key><dict><key>foreground</key><string>#FF6600</string></dict></dict>
+    <dict><key>scope</key><string>string</string>
+      <key>settings</key><dict><key>foreground</key><string>#CC3300</string></dict></dict>
+    <dict><key>scope</key><string>entity.name.function</string>
+      <key>settings</key><dict><key>foreground</key><string>#CC00FF</string></dict></dict>
+    <dict><key>scope</key><string>entity.name.class</string>
+      <key>settings</key><dict><key>foreground</key><string>#00AA88</string><key>fontStyle</key><string>bold</string></dict></dict>
+    <dict><key>scope</key><string>support.function.builtin, support.type, support.function</string>
+      <key>settings</key><dict><key>foreground</key><string>#336666</string></dict></dict>
+    <dict><key>scope</key><string>meta.statement.import meta.generic-name, meta.statement.import meta.qualified-name, entity.name.namespace</string>
+      <key>settings</key><dict><key>foreground</key><string>#00CCFF</string><key>fontStyle</key><string>bold</string></dict></dict>
+  </array>
+</dict>
+</plist>

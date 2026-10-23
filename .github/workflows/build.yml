@@ -1,0 +1,44 @@
+# Builds the example PDF on every push. On a version tag (v*) it also publishes a
+# release with the PDF and aind-preprint-typst.zip, the template ready to use.
+name: Build PDF
+
+on:
+  push:
+    branches: ["**"]
+    tags: ["v*"]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: typst-community/setup-typst@v5
+        with:
+          typst-version: 0.15.1
+      - run: typst compile --font-path fonts main.typ main.pdf
+      - uses: actions/upload-artifact@v7
+        with:
+          name: preprint-pdf
+          path: main.pdf
+
+  release:
+    if: startsWith(github.ref, 'refs/tags/v')
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/download-artifact@v8
+        with:
+          name: preprint-pdf
+      # The template files at the root of the ZIP, without repository-only files.
+      - run: zip -r aind-preprint-typst.zip . -x '.git/*' '.github/*' 'docs/*' '.gitignore' 'main.pdf'
+      - uses: softprops/action-gh-release@v3
+        with:
+          generate_release_notes: true
+          files: |
+            aind-preprint-typst.zip
+            main.pdf
